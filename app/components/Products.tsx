@@ -23,7 +23,7 @@ export default function Products() {
             name: 'Organic Basil Seeds',
             category: 'Herbs',
             price: 6.99,
-            image: '/images/basil-seeds.jpg'
+            image: '/images/basil-seeds.webp'
         },
         {
             id: '4',

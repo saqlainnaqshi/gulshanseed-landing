@@ -9,7 +9,6 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
 
-    // Close menu when clicking on a link
     const closeMenu = () => setIsOpen(false)
 
     // Track scroll position for header shadow
@@ -72,24 +71,46 @@ export default function Header() {
             {/* Mobile Menu */}
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
-                        className="md:hidden fixed inset-0 bg-primary/95 backdrop-blur-sm pt-20"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.2 }}
-                    >
-                        <nav className="flex flex-col items-center space-y-8 py-8">
-                            <Link href="/" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Home</Link>
-                            <Link href="/products" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Products</Link>
-                            <Link href="/about" className="text-2xl hover:text-accent transition" onClick={closeMenu}>About</Link>
-                            <Link href="/contact" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Contact</Link>
+                    <>
+                        {/* Overlay to close menu on outside click */}
+                        <motion.div
+                            className="fixed inset-0 bg-black/40 z-40"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={closeMenu}
+                        />
 
-                            <button className="bg-accent text-onAccent px-6 py-3 rounded-md hover:bg-accentDark transition text-xl">
-                                Shop Now
+                        {/* Menu itself */}
+                        <motion.div
+                            className="md:hidden fixed top-0 right-0 w-3/4 h-full bg-primary z-50 backdrop-blur-sm pt-20"
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
+                            transition={{ duration: 0.2 }}
+                            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the menu
+                        >
+                            {/* Close icon */}
+                            <button
+                                className="absolute top-4 right-4 text-3xl font-bold text-onPrimary"
+                                onClick={closeMenu}
+                                aria-label="Close menu"
+                            >
+                                &times;
                             </button>
-                        </nav>
-                    </motion.div>
+
+                            <nav className="flex flex-col items-center space-y-8 py-8">
+                                <Link href="/" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Home</Link>
+                                <Link href="/products" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Products</Link>
+                                <Link href="/about" className="text-2xl hover:text-accent transition" onClick={closeMenu}>About</Link>
+                                <Link href="/contact" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Contact</Link>
+
+                                <button className="bg-accent text-onAccent px-6 py-3 rounded-md hover:bg-accentDark transition text-xl">
+                                    Shop Now
+                                </button>
+                            </nav>
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </header >

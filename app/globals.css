@@ -59,8 +59,10 @@
   body {
     background-color: var(--background);
     color: var(--onSurface);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s;
   }
+
 
   .bg-primary {
     background-color: var(--primary);
@@ -118,6 +120,34 @@
 
 .hamburger-line {
   transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.leaflet-container {
+  background-color: var(--background);
+}
+
+.leaflet-popup-content {
+  margin: 0.5rem;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0.5rem;
 }
 
 @keyframes float {
