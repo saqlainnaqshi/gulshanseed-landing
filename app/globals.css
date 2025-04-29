@@ -1,0 +1,145 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities" layer(tailwind);
+
+:root {
+  /* Nature-inspired color palette */
+  --primary: #3a7d44;
+  /* Rich green (primary brand color - like healthy leaves) */
+  --onPrimary: #ffffff;
+  /* White text on primary */
+  --secondary: #5d4037;
+  /* Earth brown (soil color) */
+  --accent: #ffb74d;
+  /* Golden yellow (like ripe wheat) */
+  --accentDark: #f57c00;
+  /* Darker orange (harvest color) */
+  --onAccent: #3e2723;
+  /* Dark brown text on accent */
+  --background: #f5f5f5;
+  /* Very light gray */
+  --surface: #ffffff;
+  /* Pure white surfaces */
+  --onSurface: #333333;
+  /* Dark gray for text */
+  --success: #4caf50;
+  /* Growth green */
+  --warning: #ff9800;
+  /* Warning orange */
+}
+
+.dark {
+  /* Dark mode variants */
+  --primary: #81c784;
+  /* Soft green */
+  --onPrimary: #1b5e20;
+  /* Dark green text */
+  --secondary: #8d6e63;
+  /* Light earth brown */
+  --accent: #ffd54f;
+  /* Light golden yellow */
+  --accentDark: #ffa000;
+  /* Bright orange */
+  --onAccent: #3e2723;
+  /* Dark brown text */
+  --background: #121212;
+  /* Very dark background */
+  --surface: #1e1e1e;
+  /* Dark surfaces */
+  --onSurface: #e0e0e0;
+  /* Light gray text */
+  --success: #66bb6a;
+  /* Light success green */
+  --warning: #ffb74d;
+  /* Light warning orange */
+}
+
+@layer utilities {
+
+  /* Your existing utility classes */
+  body {
+    background-color: var(--background);
+    color: var(--onSurface);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .text-onPrimary {
+    color: var(--onPrimary);
+  }
+
+  .text-secondary {
+    color: var(--secondary);
+  }
+
+  .bg-accent {
+    background-color: var(--accent);
+  }
+
+  .bg-accentDark {
+    background-color: var(--accentDark);
+  }
+
+  .text-onAccent {
+    color: var(--onAccent);
+  }
+
+  .bg-surface {
+    background-color: var(--surface);
+  }
+
+  .text-onSurface {
+    color: var(--onSurface);
+  }
+
+  /* Additional agricultural-themed utilities */
+  .bg-earth {
+    background-color: var(--secondary);
+  }
+
+  .text-earth {
+    color: var(--secondary);
+  }
+
+  .bg-harvest {
+    background-color: var(--accent);
+  }
+
+  .text-harvest {
+    color: var(--accent);
+  }
+}
+
+.hamburger-line {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
