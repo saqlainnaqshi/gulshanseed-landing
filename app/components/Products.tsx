@@ -35,7 +35,7 @@ export default function Products() {
     ]
 
     return (
-        <section className="py-16 bg-surface">
+        <section className="py-16 bg-surface" id="product">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-12 text-primary">Our Featured Products</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -51,12 +51,12 @@ export default function Products() {
                             <div className="p-6">
                                 <span className="text-sm text-secondary">{product.category}</span>
                                 <h3 className="text-xl font-semibold mt-2 text-primary">{product.name}</h3>
-                                <div className="mt-4 flex justify-between items-center">
+                                {/* <div className="mt-4 flex justify-between items-center">
                                     <span className="text-lg font-bold text-primary">${product.price.toFixed(2)}</span>
                                     <button className="bg-accent text-onAccent px-4 py-2 rounded-md hover:bg-accentDark transition">
                                         Add to Cart
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))}

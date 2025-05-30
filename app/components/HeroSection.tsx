@@ -11,24 +11,24 @@ const heroSlides = [
         description: "GulshanSeed provides the highest quality agricultural seeds to help farmers achieve maximum yield.",
         lightImage: "/images/hero-dark.jpg",
         darkImage: "/images/hero-dark.jpg",
-        ctaPrimary: "Browse Products",
-        ctaSecondary: "Learn More"
+        // ctaPrimary: "Browse Products",
+        // ctaSecondary: "Learn More"
     },
     {
         title: "Innovative Farming Solutions",
         description: "Discover our cutting-edge agricultural technologies designed to boost your productivity.",
         lightImage: "/images/innovation-dark.jpg",
         darkImage: "/images/innovation-dark.jpg",
-        ctaPrimary: "View Innovations",
-        ctaSecondary: "Our Technology"
+        // ctaPrimary: "View Innovations",
+        // ctaSecondary: "Our Technology"
     },
     {
         title: "Sustainable Agriculture",
         description: "Join us in cultivating a greener future with eco-friendly farming practices.",
         lightImage: "/images/sustainable-dark.jpg",
         darkImage: "/images/sustainable-dark.jpg",
-        ctaPrimary: "Sustainable Options",
-        ctaSecondary: "Our Mission"
+        // ctaPrimary: "Sustainable Options",
+        // ctaSecondary: "Our Mission"
     }
 ]
 
@@ -122,7 +122,7 @@ export default function HeroSection() {
                                     {heroSlides[currentSlide].description}
                                 </motion.p>
 
-                                <motion.div
+                                {/* <motion.div
                                     variants={textVariants}
                                     initial="hidden"
                                     animate="visible"
@@ -141,7 +141,7 @@ export default function HeroSection() {
                                     >
                                         {heroSlides[currentSlide].ctaSecondary}
                                     </button>
-                                </motion.div>
+                                </motion.div> */}
                             </motion.div>
                         </AnimatePresence>
                     </div>

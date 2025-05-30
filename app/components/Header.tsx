@@ -42,16 +42,25 @@ export default function Header() {
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex space-x-8">
                     <Link href="/" className="hover:text-accent transition">Home</Link>
-                    <Link href="/products" className="hover:text-accent transition">Products</Link>
+                    {/* <Link href="/products" className="hover:text-accent transition">Products</Link> */}
                     <Link href="/about" className="hover:text-accent transition">About</Link>
                     <Link href="/contact" className="hover:text-accent transition">Contact</Link>
                 </nav>
 
                 <div className="flex items-center space-x-4">
                     <ThemeToggle />
-                    <button className="hidden md:block bg-accent text-onAccent px-4 py-2 rounded-md hover:bg-accentDark transition">
+                    {/* <button className="hidden md:block bg-accent text-onAccent px-4 py-2 rounded-md hover:bg-accentDark transition">
                         Shop Now
-                    </button>
+                    </button> */}
+                    <div className="hidden md:block text-center">
+                        <button
+                            className="bg-accent text-onAccent px-4 py-2 rounded-md opacity-50 cursor-not-allowed transition"
+                            disabled
+                        >
+                            Shop Now
+                        </button>
+                        <p className="text-xs text-onPrimary mt-1">Coming Soon</p>
+                    </div>
 
                     {/* Mobile Hamburger Button */}
                     <button
@@ -101,12 +110,23 @@ export default function Header() {
 
                             <nav className="flex flex-col items-center space-y-8 py-8">
                                 <Link href="/" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Home</Link>
-                                <Link href="/products" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Products</Link>
+                                {/* <Link href="/products" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Products</Link> */}
                                 <Link href="/about" className="text-2xl hover:text-accent transition" onClick={closeMenu}>About</Link>
                                 <Link href="/contact" className="text-2xl hover:text-accent transition" onClick={closeMenu}>Contact</Link>
 
-                                <button className="bg-accent text-onAccent px-6 py-3 rounded-md hover:bg-accentDark transition text-xl">
+                                {/* <button className="bg-accent text-onAccent px-6 py-3 rounded-md hover:bg-accentDark transition text-xl">
                                     Shop Now
+                                </button> */}
+                                <button
+                                    className="md:hidden p-2 rounded-md focus:outline-none"
+                                    onClick={() => setIsOpen(!isOpen)}
+                                    aria-label="Toggle menu"
+                                >
+                                    <div className="w-6 flex flex-col gap-1">
+                                        <span className={`h-0.5 bg-current rounded-full transition-all ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                                        <span className={`h-0.5 bg-current rounded-full transition-all ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                                        <span className={`h-0.5 bg-current rounded-full transition-all ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                                    </div>
                                 </button>
                             </nav>
                         </motion.div>

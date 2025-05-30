@@ -11,36 +11,34 @@ export default function Footer() {
                         <h3 className="text-xl font-bold mb-4">GulshanSeed</h3>
                         <p className="mb-4">Providing quality seeds for farmers since 1985.</p>
                         <div className="flex space-x-4">
-                            <a href="#" className="hover:text-accent">Facebook</a>
-                            <a href="#" className="hover:text-accent">Twitter</a>
-                            <a href="#" className="hover:text-accent">Instagram</a>
+                            <a href="https://www.instagram.com/gulshan.seed/" className="hover:text-accent">Instagram</a>
                         </div>
                     </div>
                     <div>
                         <h4 className="text-lg font-semibold mb-4">Products</h4>
                         <ul className="space-y-2">
-                            <li><Link href="#" className="hover:text-accent">Vegetable Seeds</Link></li>
-                            <li><Link href="#" className="hover:text-accent">Fruit Seeds</Link></li>
-                            <li><Link href="#" className="hover:text-accent">Flower Seeds</Link></li>
-                            <li><Link href="#" className="hover:text-accent">Herb Seeds</Link></li>
+                            <li><Link href="/#product" className="hover:text-accent">Vegetable Seeds</Link></li>
+                            <li><Link href="/#product" className="hover:text-accent">Fruit Seeds</Link></li>
+                            <li><Link href="/#product" className="hover:text-accent">Flower Seeds</Link></li>
+                            <li><Link href="/#product" className="hover:text-accent">Herb Seeds</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-lg font-semibold mb-4">Company</h4>
                         <ul className="space-y-2">
-                            <li><Link href="#" className="hover:text-accent">About Us</Link></li>
-                            <li><Link href="#" className="hover:text-accent">Our Team</Link></li>
+                            <li><Link href="/about" className="hover:text-accent">About Us</Link></li>
+                            {/* <li><Link href="#" className="hover:text-accent">Our Team</Link></li>
                             <li><Link href="#" className="hover:text-accent">Careers</Link></li>
-                            <li><Link href="#" className="hover:text-accent">Blog</Link></li>
+                            <li><Link href="#" className="hover:text-accent">Blog</Link></li> */}
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-lg font-semibold mb-4">Contact</h4>
                         <address className="not-italic">
-                            <p>123 Farm Road</p>
-                            <p>Agricultural City, AC 12345</p>
-                            <p>Phone: (123) 456-7890</p>
-                            <p>Email: info@gulshanseed.com</p>
+                            <p>Ganderpora, Sakidaffar, 190002</p>
+                            <p>Srinagar, J&K, India</p>
+                            <p>Phone: 0194-2421140</p>
+                            <p>Email: gulshanseed@gmail.com</p>
                         </address>
                     </div>
                 </div>

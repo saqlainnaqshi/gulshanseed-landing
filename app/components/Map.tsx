@@ -29,7 +29,7 @@ export default function Map({ center }: { center: L.LatLngTuple }) {
             <Marker position={center} icon={customIcon}>
                 <Popup className="text-center">
                     <h3 className="font-bold text-primary">GulshanSeed</h3>
-                    <p className="text-secondary">Ganderpore, Srinagar, Kashmir, India</p>
+                    <p className="text-secondary">Ganderpora, Sakidaffar, Srinagar, J&K, India</p>
                 </Popup>
             </Marker>
         </MapContainer>

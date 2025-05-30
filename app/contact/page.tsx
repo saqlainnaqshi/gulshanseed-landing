@@ -165,7 +165,7 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="font-medium text-onSurface">Email</h3>
                                         <a href="mailto:contact@gulshanseed.com" className="text-secondary hover:text-accent transition">
-                                            contact@gulshanseed.com
+                                            gulshanseed@gmail.com
                                         </a>
                                     </div>
                                 </li>
@@ -176,12 +176,11 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-medium text-onSurface">Phone</h3>
-                                        <a href="tel:+911234567890" className="text-secondary hover:text-accent transition">
-                                            +91-12345-67890
+                                        <a href="tel:+0194-2421140" className="text-secondary hover:text-accent transition">
+                                            0194-2421140
                                         </a>
                                     </div>
                                 </li>
-
                                 <li className="flex items-start">
                                     <div className="bg-accent/10 p-3 rounded-full mr-4">
                                         <FiMapPin className="text-accent text-xl" />
@@ -189,7 +188,10 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="font-medium text-onSurface">Address</h3>
                                         <p className="text-secondary">
-                                            123 Green Lane, Kashmir, India
+                                            Ganderpora, Sakidaffar, Srinagar, J&K
+                                        </p>
+                                        <p className="text-secondary">
+                                            190002
                                         </p>
                                     </div>
                                 </li>
@@ -198,13 +200,13 @@ export default function ContactPage() {
                             <div className="mt-12">
                                 <h3 className="font-medium text-onSurface mb-4">Follow Us</h3>
                                 <div className="flex space-x-4">
-                                    <a href="#" className="bg-surface-200 p-3 rounded-full hover:bg-accent/10 hover:text-accent transition">
+                                    {/* <a href="#" className="bg-surface-200 p-3 rounded-full hover:bg-accent/10 hover:text-accent transition">
                                         <FiTwitter className="text-xl" />
                                     </a>
                                     <a href="#" className="bg-surface-200 p-3 rounded-full hover:bg-accent/10 hover:text-accent transition">
                                         <FiFacebook className="text-xl" />
-                                    </a>
-                                    <a href="#" className="bg-surface-200 p-3 rounded-full hover:bg-accent/10 hover:text-accent transition">
+                                    </a> */}
+                                    <a href="https://www.instagram.com/gulshan.seed/#" target="_blank" rel="noopener noreferrer" className="bg-surface-200 p-3 rounded-full hover:bg-accent/10 hover:text-accent transition">
                                         <FiInstagram className="text-xl" />
                                     </a>
                                 </div>
@@ -212,7 +214,7 @@ export default function ContactPage() {
                         </motion.div>
 
                         {/* Contact Form */}
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
@@ -277,21 +279,32 @@ export default function ContactPage() {
                                     Send Message
                                 </button>
                             </form>
+                        </motion.div> */}
+
+
+                        {/* Map Section */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            className="bg-surface p-4 rounded-2xl shadow-lg border border-surface-200"
+                        >
+                            {/* <motion.section
+                                className="mt-20 bg-surface rounded-2xl overflow-hidden shadow-lg border border-surface-200"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                            > */}
+                            <div className=" md:h-96 w-full">
+                                <Map center={mapCenter} />
+                            </div>
+                            {/* </motion.section> */}
                         </motion.div>
                     </div>
 
-                    {/* Map Section */}
-                    <motion.section
-                        className="mt-20 bg-surface rounded-2xl overflow-hidden shadow-lg border border-surface-200"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                    >
-                        <div className="h-64 md:h-96 w-full">
-                            <Map center={mapCenter} />
-                        </div>
-                    </motion.section>
+
                 </div>
             </div>
         </>
