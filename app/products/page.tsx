@@ -189,7 +189,7 @@ export default function ProductsPage() {
 
                 {/* CTA Section */}
                 <section className="mt-16 text-center">
-                    <h2 className="text-2xl font-bold mb-4 text-primary">Can't find what you're looking for?</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-primary">Can&apos;t find what you&apos;re looking for?</h2>
                     <p className="text-secondary mb-6 max-w-2xl mx-auto">
                         We source special seed varieties upon request. Contact our team for custom orders.
                     </p>

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FiMail, FiPhone, FiMapPin, FiSend, FiTwitter, FiFacebook, FiInstagram } from 'react-icons/fi'
+import { FiMail, FiPhone, FiMapPin, FiInstagram } from 'react-icons/fi'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import dynamic from 'next/dynamic'
